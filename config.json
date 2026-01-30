@@ -1,0 +1,51 @@
+{
+  "system": {
+    "name": "ULTIMA_SYSTEM",
+    "version": "1.0.0",
+    "description": "IMPULSE REBIRTH [ 2026 ] - Unified AI Integration Platform"
+  },
+  "integrations": {
+    "ollama": {
+      "enabled": true,
+      "base_url": "http://localhost:11434",
+      "default_model": "llama2",
+      "timeout": 30
+    },
+    "dolphin": {
+      "enabled": true,
+      "path": "E:\\[ PROJECTS ]\\[ LOCAL ]\\[ CODEX ] PC\\[ DOLPHIN ]",
+      "scripts": {
+        "main": "dolphin.mjs",
+        "agent": "agent.mjs",
+        "ideas": "create-idea.mjs"
+      }
+    },
+    "gemini": {
+      "enabled": true,
+      "cli_command": "gemini",
+      "default_model": "gemini-2.0-flash-exp",
+      "temperature": 0.7,
+      "max_tokens": 2048
+    },
+    "claude": {
+      "enabled": true,
+      "credentials_path": "C:\\Users\\SHAD\\.claude\\.credentials.json",
+      "subscription_type": "pro"
+    }
+  },
+  "features": {
+    "auto_fallback": true,
+    "provider_priority": ["gemini", "ollama", "claude"],
+    "async_support": true,
+    "logging": {
+      "enabled": true,
+      "level": "INFO",
+      "file": "ultima_system.log"
+    }
+  },
+  "paths": {
+    "vault": "E:\\[ PROJECTS ]\\[ LOCAL ]\\[ CLAUDE ] PC\\[ WOLF_AI ]\\VAULT",
+    "logs": "E:\\[ PROJECTS ]\\[ LOCAL ]\\[ CLAUDE ] PC\\[ WOLF_AI ]\\ULTIMA_SYSTEM\\logs",
+    "cache": "E:\\[ PROJECTS ]\\[ LOCAL ]\\[ CLAUDE ] PC\\[ WOLF_AI ]\\ULTIMA_SYSTEM\\cache"
+  }
+}
